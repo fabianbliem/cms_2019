@@ -20,8 +20,12 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        test: /\.s[ac]ss$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.(png|jpe?g|svg)$/i,
@@ -35,7 +39,16 @@ module.exports = {
             return './img/[name].[ext]';
           },
         },
-    }
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 25000,
+          },
+        },
+      }
     ]
   },
   plugins: [
