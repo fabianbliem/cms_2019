@@ -24,14 +24,18 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.(jpg|png)$/,
-        use: {
-          loader: "url-loader",
-          options: {
-            limit: 25000,
+        test: /\.(png|jpe?g|svg)$/i,
+        loader: 'file-loader',
+        options: {
+          name(file) {
+            if (process.env.NODE_ENV === 'development') {
+              return '[path][name].[ext]';
+            }
+
+            return './img/[name].[ext]';
           },
         },
-      }
+    }
     ]
   },
   plugins: [

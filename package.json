@@ -33,7 +33,8 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1",
     "http-server": "^0.11.1",
-    "url-loader": "^2.2.0"
-
+    "url-loader": "^2.2.0",
+    "file-loader": "^4.2.0",
+    "fileloader": "^2.0.0"
   }
 }
