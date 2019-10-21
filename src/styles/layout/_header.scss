@@ -9,6 +9,11 @@
         flex-basis: 40%;
         margin: 0;
         padding-left: 20px;
+        
+        a{
+            color: $blue;
+            text-decoration: none;
+        }
     }
 
     &__nav{
@@ -28,10 +33,61 @@
 
     &__list-item{
         padding: 0 5px;
+
+        a{
+            text-decoration: none;
+            color: #000
+        }
+
+        :hover, :focus, :active{
+            text-decoration: underline;
+            color: $blue;
+        }
     }
 
     &__hero{
-        // background-image: url('../../assets/images/illuminated-keyboard-1242287.jpg');
-        // background-size: cover;
+        background: url('/src/assets/images/illuminated-keyboard-1242287.jpg');
+        background-size: cover;
+        flex-basis: 100%;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    &__hero-text{
+        color: $blue;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-top: 25px;
+        margin-right: 25px;
+        font-size: 38px;
+
+        span{
+            margin: 3px 0;
+            display: block;
+            background: #FFF;
+            padding: 0 10px;
+        }
+    }
+
+    &__hero-button{
+        display: flex;
+        margin-top: 5px;
+        margin-bottom: 25px;
+        margin-right: 25px;
+
+        background-color: $green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 5px;
+        font-size: 24px;
+            &:hover, :active, :focus{
+                cursor: pointer;
+                background-color: $darkGreen;
+            }
+
     }
 }
