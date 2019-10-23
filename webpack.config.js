@@ -34,22 +34,21 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|svg)$/i,
-        loader: 'file-loader',
-        options: {
-          name: './img/[name].[ext]',
-        },
-      },
-      {
-        test: /\.(jpg|png|svg)$/,
-        use: {
-          loader: "url-loader",
+        test: /\.(png|jpe?g|svg|jpg)$/i,
+        use:{
+          loader: 'file-loader',
           options: {
-            limit: 25000,
+            name: './[name].[hash].[ext]',
+            outputPath: 'images'
           },
-        },
-      }
+        }
+      },
     ]
+  },
+  resolve: {
+    alias: {
+      'imagesImg': path.resolve(__dirname, 'src/assets/images')
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
