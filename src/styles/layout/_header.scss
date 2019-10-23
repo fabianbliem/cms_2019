@@ -84,10 +84,11 @@
         border-radius: 5px;
         padding: 10px 5px;
         font-size: 24px;
-            &:hover, :active, :focus{
-                cursor: pointer;
-                background-color: $darkGreen;
-            }
+
+        &:hover, :active, :focus{
+            cursor: pointer;
+            background-color: $darkGreen;
+        }
 
     }
 }
