@@ -3,20 +3,25 @@
 *, *:after, *:before {
     box-sizing: border-box;
   }
-  
+
   html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     font-family: 'Roboto Slab', serif;
   }
-  
-  
+
+
   body {
     font-weight: normal;
     line-height: 1.5;
   }
-  
+
   h1{
     font-size: 50px;
     margin-left: 20px;
+  }
+
+  .max-with-container {
+    margin: 0 auto;
+    max-width: 70rem;
   }
