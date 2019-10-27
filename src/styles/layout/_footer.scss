@@ -1,0 +1,74 @@
+.footer {
+  padding: 0 20px;
+  background-color: $blue;
+  color: white;
+
+  &__section {
+    padding: 10px 20px;
+
+    &:first-child {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      nav {
+        ul {
+          li {
+            display: inline-block;
+
+            &:not(:first-child) {
+
+              &::before {
+                content: "|";
+                padding-right: 8px;
+              }
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+    }
+
+    &:not(:first-child) {
+      h2 {
+        font-size: 1.2em;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        margin: 0 0 0 20px;
+        padding: 0;
+        list-style: disc;
+      }
+
+      li {
+        padding: 2px 0;
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  #impressum {
+    p {
+      flex-basis: 100%;
+      margin-right: 50%;
+    }
+  }
+
+  h3 {
+    color: white;
+    font-weight: normal;
+  }
+
+}

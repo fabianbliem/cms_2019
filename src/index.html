@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,119 +7,137 @@
     <title>Alex Mayer Design</title>
 </head>
 <body>
-    <header class="header">
-        <h1 class="header__headline"><a href="#">Alex Mayer</a></h1>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__list-item"><a href='#'>Start</a></li>
-                <li class="header__list-item"><a href='#'>Leistungen</a></li>
-                <li class="header__list-item"><a href='#'>Blog</a></li>
-                <li class="header__list-item"><a href='#'>Über mich</a></li>
-                <li class="header__list-item"><a href='#'>Kontakt</a></li>
+<header class="header">
+    <h1 class="header__headline"><a href="#">Alex Mayer</a></h1>
+    <nav class="header__nav">
+        <ul class="header__nav-list">
+            <li class="header__list-item"><a href='#'>Start</a></li>
+            <li class="header__list-item"><a href='#'>Leistungen</a></li>
+            <li class="header__list-item"><a href='#'>Blog</a></li>
+            <li class="header__list-item"><a href='#'>Über mich</a></li>
+            <li class="header__list-item"><a href='#'>Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero" class="header__hero">
+        <div>
+            <h2 class="header__hero-text"><span>Glänzende Ideen</span> <span>für leuchtende</span> <span>Augen</span>
+            </h2>
+            <button class="header__hero-button">Angebot einholen</button>
+        </div>
+    </section>
+</header>
+
+<main>
+    <section id="services" class="services">
+        <h2 class="services__headline">Leistungen</h2>
+        <div class="services__item services__item--yellow">
+            <p class="services__item-headline">Design</p>
+            <img class="services__item-image" src=<%=require("./assets/icons/design.svg")%> alt="Stifteschale">
+        </div>
+        <div class="services__item services__item--blue">
+            <p class="services__item-headline">Strategie</p>
+            <img class="services__item-image" src=<%=require("./assets/icons/strategy.svg")%> alt="Zielscheibe">
+        </div>
+        <div class="services__item services__item--green">
+            <p class="services__item-headline">Consulting</p>
+            <img class="services__item-image" src=<%=require("./assets/icons/consulting.svg")%> alt="Glühbirne">
+        </div>
+    </section>
+
+    <section id="news" class="news">
+        <h2 class="news__headline">News</h2>
+        <ul class="news__list">
+            <li class="news__list-item">
+                <p><a class="news__list-link" href="#">365 Postkarten </a>- Eine Liebeserklärung für jeden Tag! <a
+                        class="news__list-link" href="#">[mehr erfahren]</a></p>
+            </li>
+            <li class="news__list-item">
+                <p><a class="news__list-link" href="#">Award Nominierung </a>- Tolle News: ich bin bei der Endauswahl
+                    2018! <a class="news__list-link" href="#">[mehr erfahren]</a></p>
+            </li>
+            <li class="news__list-item">
+                <p><a class="news__list-link" href="#">CMYK erklärt</a> - der neueste <a class="news__list-link"
+                                                                                         href="#">Blog</a>-Eintrag <a
+                        class="news__list-link" href="#">[mehr erfahren]</a></p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="references" class="references">
+        <h2 class="references__headline">Referenzen</h2>
+        <div class="references__item">
+            <div class="references__item-imageWrapper">
+                <img src=<%=require("./assets/images/dina-meyer.jpg")%> alt="Tina Ubuntu">
+            </div>
+            <p><cite>Tina Ubuntu<br>CEO Headless Ltd.</cite></p>
+            <blockquote>Alex‘ Redesign hat maßgeblich mitgeholfen, unseren Umsatz um 20% in die Höhe zu treiben!
+            </blockquote>
+        </div>
+        <div class="references__item">
+            <div class="references__item-imageWrapper">
+                <img src=<%=require("./assets/images/thomas-meyer.jpg")%> alt="Tom Herzog">
+            </div>
+            <p><cite>Tom Herzog<br>Cutter's Finest</cite></p>
+            <blockquote>Große Webkunst – keine Kunst mit Alex Mayer!</blockquote>
+        </div>
+        <div class="references__item">
+            <div>
+                <img src=<%=require("./assets/icons/quotation_mark.svg")%> alt="Quotation">
+            </div>
+            <div class="references__item-imageWrapper">
+                <img src=<%=require("./assets/images/vorstand.jpg")%> alt="Vorstand Müller AG">
+            </div>
+            <div class="quoteWrapper">
+                <p><cite>Vorstand Müller AG<br>KR Ernst Anker, Dr. Florian Eisner</cite></p>
+                <blockquote>Das Store-Konzept von Alex Mayer hat unsere größten Erwartungen übertroffen.</blockquote>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="footer" class="footer">
+    <section id="footer-nav" class="footer__section">
+        <p>&copy; Alex Mayer 2018</p>
+        <nav class="footer__nav">
+            <ul>
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">Datenschutz</a></li>
             </ul>
         </nav>
+    </section>
 
-        <section id="hero" class="header__hero">
-            <div>
-                <h2 class="header__hero-text"><span>Glänzende Ideen</span> <span>für leuchtende</span> <span>Augen</span></h2>
-                <button class="header__hero-button">Angebot einholen</button>
-            </div>
-        </section>
-    </header>
 
-    <main>
-        <section id="services" class="services">
-            <h2 class="services__headline">Leistungen</h2>
-            <div class="services__item services__item--yellow">
-                <p class="services__item-headline">Design</p>
-                <img class="services__item-image" src=<%=require("./assets/icons/design.svg")%> alt="Stifteschale">
-            </div>
-            <div class="services__item services__item--blue">
-                <p class="services__item-headline">Strategie</p>
-                <img class="services__item-image" src=<%=require("./assets/icons/strategy.svg")%> alt="Zielscheibe">
-            </div>
-            <div class="services__item services__item--green">
-                <p class="services__item-headline">Consulting</p>
-                <img class="services__item-image" src=<%=require("./assets/icons/consulting.svg")%> alt="Glühbirne">
-            </div>
-        </section>
+    <section id="impressum" class="footer__section">
+        <p>Demo-Wordpress-Seite im Rahmen der LV ‚Content Mangagement Systeme‘ an der FH Salzburg von Tobias Kuhn und
+            Fabian Bliem</p>
+        <p>Alle Inhalte frei erfunden</p>
+    </section>
 
-        <section id="news" class="news">
-            <h2 class="news__headline">News</h2>
-            <ul class="news__list">
-                <li class="news__list-item">
-                    <p><a class="news__list-link" href="#">365 Postkarten </a>- Eine Liebeserklärung für jeden Tag! <a class="news__list-link" href="#">[mehr erfahren]</a></p>
+    <section id="credits" class="footer__section">
+        <h2>Bildnachweis</h2>
+        <div>
+            <h3>Fotos</h3>
+            <ul>
+                <li>Herofoto Tastatur: Aman Anderson, http://de.freeimages.com/photo/illuminated-keyboard-124228</li>
+                <li>Foto Thomas Meyer-Hermann By Thomas Meyer-Hermann (Thomas Meyer-Hermann) [GFDL
+                    (http://www.gnu.org/copyleft/fdl.html), CC BY-SA 3.0
+                    (https://creativecommons.org/licenses/by-sa/3.0) or CC BY-SA 3.0 de
+                    (https://creativecommons.org/licenses/by-sa/3.0/de/deed.en)], via Wikimedia Commons
+                    https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Thomas_Meyer-Hermann_1.jpg/407px-Thomas_Meyer-Hermann_1.jpg
                 </li>
-                <li class="news__list-item">
-                    <p><a class="news__list-link" href="#">Award Nominierung </a>- Tolle News: ich bin bei der Endauswahl 2018! <a class="news__list-link" href="#">[mehr erfahren]</a></p>
-                </li>
-                <li class="news__list-item">
-                    <p><a class="news__list-link" href="#">CMYK erklärt</a> - der neueste <a class="news__list-link" href="#">Blog</a>-Eintrag <a class="news__list-link" href="#">[mehr erfahren]</a></p>
+                <li>Foto Vorstand Sparkasse Ülzen [[File:SKUelzen Vorstand 2015.jpg|SKUelzen Vorstand 2015]]
+                    https://upload.wikimedia.org/wikipedia/commons/3/3e/SKUelzen_Vorstand_2015.jpg
                 </li>
             </ul>
-        </section>
-
-        <section id="references">
-            <h2>Referenzen</h2>
-            <div>
-                <img src=<%=require("./assets/images/dina-meyer.jpg")%> alt="Tina Ubuntu">
-                <p><cite>Tina Ubuntu<br>CEO Headless Ltd.</cite></p>
-                <blockquote>
-                    <p>Alex‘ Redesign hat maßgeblich mitgeholfen, unseren Umsatz um 20% in die Höhe zu treiben!</p>
-                </blockquote>                
-            </div>
-            <div>
-                <img src=<%=require("./assets/images/thomas-meyer.jpg")%> alt="Tom Herzog">
-                <p><cite>Tom Herzog<br>Cutter's Finest</cite></p>
-                <blockquote>
-                    <p>Große Webkunst – keine Kunst mit Alex Mayer!</p>
-                </blockquote>                
-            </div>
-            <div>
-                <img src=<%=require("./assets/images/vorstand.jpg")%> alt="Vorstand Müller AG">
-                <p><cite>Vorstand Müller AG<br>KR Ernst Anker, Dr. Florian Eisner</cite></p>
-                <blockquote>
-                    <p>Das Store-Konzept von Alex Mayer hat unsere größten Erwartungen übertroffen.</p>
-                </blockquote>                
-            </div>
-            <div id="bluebox"></div>
-        </section>
-    </main>
-
-    <footer>
-        <section id="footer-nav">
-            <p>&copy; Alex Mayer 2018</p>
-            <nav>
-                <ul>
-                    <li><a href="#"></a>Impressum | </li>
-                    <li><a href="#">Datenschutz</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <section id="impressum">
-            <p>Demo-Wordpress-Seite im Rahmen der LV ‚Content Mangagement Systeme‘ an der FH Salzburg von Tobias Kuhn und Fabian Bliem</p>
-            <p>Alle Inhalte frei erfunde</p>
-        </section>
-
-        <section id="credits">
-            <h2>Bildnachweis</h2>
-            <div>
-                <h3>Fotos</h3>
-                <ul>
-                    <li>Herofoto Tastatur: Aman Anderson, http://de.freeimages.com/photo/illuminated-keyboard-124228</li>
-                    <li>Foto Thomas Meyer-Hermann By Thomas Meyer-Hermann (Thomas Meyer-Hermann) [GFDL (http://www.gnu.org/copyleft/fdl.html), CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0) or CC BY-SA 3.0 de (https://creativecommons.org/licenses/by-sa/3.0/de/deed.en)], via Wikimedia Commons https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Thomas_Meyer-Hermann_1.jpg/407px-Thomas_Meyer-Hermann_1.jpg</li>
-                    <li>Foto Vorstand Sparkasse Ülzen [[File:SKUelzen Vorstand 2015.jpg|SKUelzen Vorstand 2015]] https://upload.wikimedia.org/wikipedia/commons/3/3e/SKUelzen_Vorstand_2015.jpg</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Icons</h3>
-                <ul>
-                    <li>Freepik (http://www.freepik.com) / www.flaticon.com</li>
-                </ul>
-            </div>
-        </section>
-    </footer>
-    
+        </div>
+        <div>
+            <h3>Icons</h3>
+            <ul>
+                <li>Freepik (http://www.freepik.com) / www.flaticon.com</li>
+            </ul>
+        </div>
+    </section>
+</footer>
 </body>
 </html>
