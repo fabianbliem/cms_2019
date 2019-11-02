@@ -46,7 +46,6 @@
     }
 
     &__hero{
-        background-size: cover;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -55,10 +54,14 @@
 
         &--about{
             background: url('~imagesImg/about_us.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
         &--index{
             background: url('~imagesImg/illuminated-keyboard-1242287.jpg');
+            background-size: cover;
+            background-position: center;
         }
 
         div {
