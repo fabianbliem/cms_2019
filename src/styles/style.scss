@@ -2,8 +2,4 @@
 @import "variables";
 @import "globals";
 
-@import './layout/header';
-@import './layout/services';
-@import './layout/news';
-@import './layout/references';
-@import './layout/footer';
+@import './layout/*';

@@ -1,6 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const globImporter = require('node-sass-glob-importer');
 
 module.exports = {
   entry: "./src/index.js",
@@ -8,8 +10,14 @@ module.exports = {
     filename: "main.js",
     path: path.resolve(__dirname, "dist")
   },
+  
+  devServer: {
+    contentBase: './dist'
+  },
+
   module: {
     rules: [
+
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
@@ -20,6 +28,7 @@ module.exports = {
           }
         }
       },
+
       {
         test: /\.s[ac]ss$/i,
         use: [
@@ -30,9 +39,25 @@ module.exports = {
             },
           },
           'css-loader',
-          'sass-loader',
+          {
+            loader : 'sass-loader',
+            options: {
+              sassOptions: {
+                importer: globImporter()
+              }
+            }
+          },
         ],
       },
+
+      {
+        test: /\_.*\.html$/,
+        include: [path.resolve(__dirname, 'src/partials')],
+        use: [{
+          loader: 'html-loader'
+        }]
+      },
+
       {
         test: /\.(png|jpe?g|svg|jpg)$/i,
         use:{
@@ -43,21 +68,30 @@ module.exports = {
           },
         }
       },
+
     ]
   },
+
   resolve: {
     alias: {
       'imagesImg': path.resolve(__dirname, 'src/assets/images')
     }
   },
+  
   plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      inject: true
-    }),
+    new CleanWebpackPlugin(),
+
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
       chunkFilename: '[id].[hash].css',
     }),
+
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      inject: true,
+      hash: true,
+    }),
+
+    
   ]
 };
