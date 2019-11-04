@@ -1,114 +1,126 @@
+.header {
 
-.header{
+  &__menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    box-shadow: 0 0.5px 0.5px lightgray;
 
-    &__headline{
-        flex-basis: 40%;
-        margin: 0;
-        padding-left: 20px;
+  }
 
-        a{
-            color: $blue;
-            text-decoration: none;
-        }
+
+  &__headline {
+    flex-basis: 40%;
+    margin: 0;
+    /* top | right | bottom | left */
+    padding: 0 0 5px 20px;
+
+
+    a {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+
+  &__nav {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding-right: 20px;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__list-item {
+    padding: 0 15px;
+
+    a {
+      text-decoration: none;
+      color: #000
     }
 
-    &__nav{
-        flex-basis: 60%;
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: row;
-        padding-right: 20px;
+    :hover, :focus, :active {
+      text-decoration: underline;
+      color: $blue;
+    }
+  }
+
+  &__hero {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 5vw 0;
+
+    &--about {
+      background: url('~imagesImg/about_us.jpg');
+      background-size: cover;
+      background-position: center;
     }
 
-    &__nav-list{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+    &--index {
+      background: url('~imagesImg/illuminated-keyboard-1242287.jpg');
+      background-size: cover;
+      background-position: center;
     }
 
-    &__list-item{
-        padding: 0 15px;
+    div {
+      grid-column: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 
-        a{
-            text-decoration: none;
-            color: #000
-        }
+  &__hero-text {
 
-        :hover, :focus, :active{
-            text-decoration: underline;
-            color: $blue;
-        }
+    color: $blue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-bottom: 0;
+    font-size: 3.5vw;
+
+    span {
+      margin: 3px 0;
+      display: block;
+      background: #FFF;
+      padding: 0 10px;
+    }
+  }
+
+  &__hero-button {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    max-width: 25vw;
+
+    background-color: $green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1vw 0;
+    font-size: 2vw;
+
+    &:hover, :active, :focus {
+      cursor: pointer;
+      background-color: $darkGreen;
     }
 
-    &__hero{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        padding: 3vw 0;
-
-        &--about{
-            background: url('~imagesImg/about_us.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        &--index{
-            background: url('~imagesImg/illuminated-keyboard-1242287.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        div {
-            grid-column: 3;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-    }
-
-    &__hero-text{
-
-        color: $blue;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        margin-top: 25px;
-        margin-right: 25px;
-        margin-bottom: 0;
-        font-size: 3vw;
-
-        span{
-            margin: 3px 0;
-            display: block;
-            background: #FFF;
-            padding: 0 10px;
-        }
-    }
-
-    &__hero-button{
-        margin-top: 5px;
-        margin-bottom: 25px;
-        margin-right: 25px;
-        max-width: 25vw;
-
-        background-color: $green;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 1vw 0;
-        font-size: 2vw;
-
-        &:hover, :active, :focus{
-            cursor: pointer;
-            background-color: $darkGreen;
-        }
-
-    }
+  }
 }

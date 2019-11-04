@@ -42,3 +42,35 @@
         padding: 20px;
     }
 }
+
+@media only screen and (max-width: 1050px) {
+    .services{
+        a {
+            padding: 40px 6vw;
+        }
+        img {
+            width: 19vw;
+            height: 19vw;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 890px) {
+    .services{
+        flex-direction: column;
+        a {
+            margin: 0 12vw 2vw 12vw;
+            width: 70vw;
+        }
+        &__item{
+            width: 88vw;
+            margin: 12px 0;
+        }
+
+        img {
+            width: 32vw;
+            height: 32vw;
+        }
+    }
+}

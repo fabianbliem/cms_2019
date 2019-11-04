@@ -1,25 +1,33 @@
-.news{
-    padding:0 20px;
+.news {
+  padding: 0 20px;
 
-    &__headline{
-        flex-basis: 100%;
-        color: $blue;
-        font-size: 32px;
-        margin: 20px 0;
-    }
+  &__headline {
+    flex-basis: 100%;
+    color: $blue;
+    font-size: 32px;
+    margin: 20px 0;
+  }
 
-    &__list{
-        background-color: $lightRed;
-        padding: 10px;
-        border-radius: 5px;
-    }
+  &__list {
+    background-color: $lightRed;
+    padding: 10px;
+    border-radius: 5px;
+  }
 
-    &__list-item{
-        font-size: 18px;
-    }
+  &__list-item {
+    font-size: 18px;
+  }
 
-    &__list-link{
-        color: $blue;
-        text-decoration: none;
+  &__list-link {
+    color: $blue;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .news {
+    &__list-link-more{
+        display: block;
     }
+  }
 }
