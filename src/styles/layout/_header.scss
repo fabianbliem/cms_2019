@@ -1,62 +1,5 @@
 .header {
 
-  &__menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    box-shadow: 0 0.5px 0.5px lightgray;
-
-  }
-
-
-  &__headline {
-    flex-basis: 40%;
-    margin: 0;
-    /* top | right | bottom | left */
-    padding: 0 0 5px 20px;
-
-
-    a {
-      color: $blue;
-      text-decoration: none;
-    }
-  }
-
-  &__nav {
-    flex-basis: 60%;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    padding-right: 20px;
-  }
-
-  &__nav-list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__list-item {
-    padding: 0 15px;
-
-    a {
-      text-decoration: none;
-      color: #000
-    }
-
-    :hover, :focus, :active {
-      text-decoration: underline;
-      color: $blue;
-    }
-  }
-
   &__hero {
     width: 100%;
     display: grid;
@@ -124,3 +67,24 @@
 
   }
 }
+
+@media only screen and (max-width: 890px) {
+  .header {
+    &__menu {
+        position: inherit;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      box-shadow: 0 0.5px 0.5px lightgray;
+    }
+      &__headline {
+          flex-basis: inherit;
+            font-size: 38px;
+      }
+      &__hero {
+
+      }
+  }
+}
+

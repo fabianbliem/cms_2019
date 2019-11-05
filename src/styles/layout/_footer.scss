@@ -77,3 +77,16 @@
   color: white;
   text-decoration: none;
 }
+
+@media only screen and (max-width: 890px) {
+  .footer #impressum p {
+    margin-right: 0;
+  }
+
+  ol, ul {
+    padding: 0;
+}
+}
+
+
+
