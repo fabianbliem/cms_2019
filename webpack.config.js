@@ -10,7 +10,7 @@ module.exports = {
     filename: "main.js",
     path: path.resolve(__dirname, "dist")
   },
-  
+
   devServer: {
     contentBase: './dist'
   },
@@ -33,7 +33,7 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader,        
+            loader: MiniCssExtractPlugin.loader,
             options: {
               hmr: process.env.NODE_ENV === 'development',
             },
@@ -77,7 +77,7 @@ module.exports = {
       'imagesImg': path.resolve(__dirname, 'src/assets/images')
     }
   },
-  
+
   plugins: [
     new CleanWebpackPlugin(),
 
@@ -94,11 +94,11 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: "./src/about.html",
-      filename: "about.html",
+      filename: "about.php",
       inject: true,
       hash: true,
     }),
 
-    
+
   ]
 };
