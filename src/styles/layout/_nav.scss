@@ -26,7 +26,7 @@
 
 .logo {
 
-  font-size: 2em;
+  // font-size: 2em;
   a {
     color: $blue;
     text-decoration: none;
@@ -184,13 +184,13 @@
  Larger screen styling
  Horizontal menu
 */
-@media (min-width: 768px) {
+@media (min-width: 1297px) {
 
   .logo {
-    flex-basis: 60%;
+    flex-basis: 50%;
     margin: 0;
     /* top | right | bottom | left */
-    padding: 0 0 5px 20px;
+    padding: 0 0 0px 20px;
   }
 
 
@@ -205,7 +205,11 @@
     left: auto;
     top: auto;
     height: auto;
-    display: block;
+    display: flex;
+    flex-basis: 50%;
+    justify-content: flex-end;
+    overflow-y: hidden;
+    
   }
 
   .main-menu ul {
@@ -222,14 +226,15 @@
   }
 
   .main-menu a {
-    color: #06c;
+    color: #000;
     border: 0 !important; /* Remove borders from off-canvas styling */
   }
 
   .main-menu a:hover,
-  .main-menu a:focus {
+  .main-menu a:focus,
+  .main-menu a:active {
     background: none; /* Remove background from off-canvas styling */
-    color: #c00;
+    color: $blue;
   }
 
 }
@@ -244,7 +249,7 @@
 }
 
 header {
-  padding: 20px;
+  padding: 5px;
   display: flex;
   align-items: baseline;
 }
