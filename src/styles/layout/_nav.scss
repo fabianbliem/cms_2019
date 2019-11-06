@@ -48,7 +48,7 @@
   height: 100%;
   overflow-y: scroll;
   overflow-x: visible;
-  transition: left 0.3s ease,
+  transition: right 0.3s ease,
   box-shadow 0.3s ease;
   z-index: 999;
 
@@ -139,7 +139,8 @@
 .main-menu:target,
 .main-menu[aria-expanded="true"] {
   display: block;
-  left: 0;
+  right: 0px;
+  left: auto;
   outline: none;
   -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
   -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
@@ -149,6 +150,11 @@
 .main-menu:target .menu-close,
 .main-menu[aria-expanded="true"] .menu-close {
   z-index: 1001;
+  font-size: 1.5em;
+  border: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-right: 15px;
 }
 
 .main-menu:target ul,
@@ -269,4 +275,3 @@ article h2 {
   font-weight: 500;
   font-size: 28px;
 }
-
