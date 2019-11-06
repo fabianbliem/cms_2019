@@ -84,7 +84,10 @@
   .header {
     &__hero {
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
+    }
+    &__hero-text {
+      align-items: center;
     }
   }
 }
