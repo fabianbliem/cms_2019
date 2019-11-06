@@ -70,21 +70,22 @@
 
 @media only screen and (max-width: 890px) {
   .header {
-    &__menu {
-        position: inherit;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      box-shadow: 0 0.5px 0.5px lightgray;
+    &__hero-text {
+      font-size: 5.5vw;
     }
-      &__headline {
-          flex-basis: inherit;
-            font-size: 38px;
-      }
-      &__hero {
+    &__hero-button{
+      font-size: 4vw;
+      max-width: none;
+    }
+  }
+}
 
-      }
+@media only screen and (max-width: 700px) {
+  .header {
+    &__hero {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 }
 
