@@ -13,20 +13,23 @@
 /* Button styling */
 .menu-toggle {
   display: inline-block;
-  padding: .75em 15px;
+  // padding: .75em 15px;
+  margin-right: 20px;
   line-height: 1em;
-  font-size: 1em;
-  color: #333;
+  font-size: 2em;
+  color: #000;
 }
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-  color: #c00;
+  color: $blue;
 }
 
 .logo {
 
   // font-size: 2em;
+  margin: 0;
+  margin-left: 20px;
   a {
     color: $blue;
     text-decoration: none;
@@ -252,6 +255,7 @@ header {
   padding: 5px;
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 article {

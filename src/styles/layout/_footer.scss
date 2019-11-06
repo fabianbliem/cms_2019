@@ -76,6 +76,7 @@
 .footer__credit-item a{
   color: white;
   text-decoration: none;
+  overflow-wrap: break-word;
 }
 
 @media only screen and (max-width: 890px) {
